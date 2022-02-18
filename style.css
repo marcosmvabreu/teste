@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section .banner{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+}
+
+section .banner::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#0043ff,#04182d);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+section .banner img{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+section .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+}
+
+section .content .form{
+    width: 50%;
+}
+
+section .content .form h2{
+    color: #022f9a;
+    font-weight: 600;
+    font-size: 1.5em; /*REVISAR*/
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #194abd;
+    display: inline-block; /*REVISAR*/
+    letter-spacing: 1px;
+}
+
+section .content .form .inputs{
+    margin-bottom: 20px;
+}
+
+section .content .form .inputs span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #022f9a;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+section .content .form .inputs input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #022f9a;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: transparent; /*REVISAR*/
+    border-radius: 10px;
+}
+
+section .content .form .inputs input[type="submit"]{
+    background: #022f9a;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section .content .form .inputs input[type="submit"]:hover{
+    background-color: #194abd ;
+}
+
+section .content .form .remember{
+    margin-bottom: 10px;
+    color: #022f9a;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+section .content .form .inputs p{
+    color: #022f9a;
+}
+
+section .content .form .inputs p a{
+    color: #194abd;
+    font-weight: 600;
+}
+
+section .content .form h3{
+    color: #022f9a;
+    text-align: center;
+    margin: 30px 0 10px;
+    font-weight: 500;
+}
+
+section .content .form .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .content .form .icons li{
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #022f9a;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer; 
+}
+
+section .content .form .icons li:hover{
+    background: #194abd;
+    transform: scale(1.2);
+}
+
+section .content .form .icons li img{
+    filter: invert(1);
+}
+
+@media(max-width: 768px){
+    section .banner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% ;
+        height: 100vh;
+    }
+
+    section .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    section .content .form{
+        width: 100%;
+        padding: 40px;
+        background: rgb(255, 255, 255, 0.9);
+        margin: 30px;
+    }
+}
+
+@media(max-height: 351px){
+    section .banner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% ;
+        height: 100vh;
+    }
+
+    section .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+        z-index: 1;
+    }
+
+    section .content .form{
+        width: 100%;
+        padding: 40px;
+        background: rgb(255, 255, 255, 0.9);
+        margin: 30px;
+    }
+}
